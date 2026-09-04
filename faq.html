@@ -423,7 +423,10 @@
   footer{padding:24px 0 44px; background:var(--paper); display:flex; flex-direction:column; align-items:center; gap:22px; text-align:center;}
   footer img{height:130px; margin-bottom:2px;}
   footer .footer-location{font-size:11px; letter-spacing:0.05em; color:#a49c8b;}
-  .footer-nav{display:flex; gap:28px; flex-wrap:wrap; justify-content:center; font-size:11.5px; letter-spacing:0.07em; text-transform:uppercase; color:#5c5546; margin-top:6px;}
+  .footer-nav{display:flex; gap:18px 26px; flex-wrap:wrap; justify-content:center; font-size:11.5px; letter-spacing:0.07em; text-transform:uppercase; color:#5c5546; margin-top:18px;}
+  @media(min-width:600px){
+    .footer-nav{gap:28px;}
+  }
   .footer-nav a{opacity:0.82; transition:opacity .3s cubic-bezier(.4,0,.2,1), color .3s cubic-bezier(.4,0,.2,1);}
   .footer-nav a:hover{opacity:1; color:var(--gold-deep);}
   .footer-legal{display:flex; gap:20px; flex-wrap:wrap; justify-content:center; font-size:11px; color:#a49c8b; letter-spacing:0.03em; padding-top:26px; margin-top:12px; border-top:1px solid var(--line); width:100%; max-width:520px;}
@@ -441,6 +444,57 @@
   .modal li{margin-bottom:12px;}
   .modal-close{position:absolute; top:16px; right:16px; width:30px; height:30px; background:none; border:1px solid var(--line); border-radius:50%; cursor:pointer; font-size:15px; color:var(--ink); line-height:1;}
   .modal-close:hover{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+
+  /* ---------- desktop breathing room (900px+ only — mobile untouched) ---------- */
+  @media(min-width:900px){
+    .wrap{max-width:1280px; padding:0 48px;}
+
+    .hero{padding-left:48px; padding-right:48px;}
+    .hero-sub{font-size:16.5px;}
+
+    .founding-top h2{font-size:clamp(30px,3.2vw,44px);}
+    .founding-body{padding:44px 0 52px;}
+    .founding-list li{padding:12px 0; font-size:15px;}
+
+    .pillars-head h2{font-size:clamp(26px,2.4vw,38px);}
+    .pillars-row{gap:52px;}
+    .pillars{gap:0 8px;}
+    .pillar{padding:24px 26px 20px 22px;}
+
+    .difference{padding:64px 0;}
+    .difference h2{font-size:clamp(26px,2.2vw,38px);}
+    .diff-grid{gap:64px;}
+    .difference p{font-size:15.5px;}
+
+    .packages{padding:64px 0;}
+    .pkg-head h2{font-size:clamp(26px,2.4vw,38px);}
+    .pkg-copy{max-width:720px;}
+    .pkg-copy p{font-size:15.5px;}
+    .pkg-includes{max-width:700px; padding-top:32px;}
+    .includes-list{gap:14px 40px;}
+    .includes-list li{font-size:14.5px;}
+    .pkg-closing{max-width:600px; padding-top:32px;}
+    .pkg-closing p{font-size:15.5px;}
+
+    .enhancements{padding:64px 0;}
+    .enh-head h2{font-size:clamp(26px,2.4vw,38px);}
+    .enh-item summary{padding:19px 26px 19px 0;}
+
+    .faq{padding:64px 0;}
+    .faq-head h2{font-size:clamp(26px,2.4vw,38px);}
+    .faq-item summary{padding:20px 26px 20px 0;}
+
+    .service-area{padding:56px 0 36px;}
+    .service-area h2{font-size:clamp(24px,2.2vw,32px);}
+    .city-list span{font-size:15.5px; padding:2px 20px 2px 0; margin-right:20px;}
+
+    .book-cta{padding:64px 0;}
+
+    footer{padding:80px 0 52px;}
+  }
+  @media(min-width:1500px){
+    .wrap{max-width:1400px;}
+  }
 
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
@@ -461,7 +515,7 @@
       <a href="investment.html">Your Experience</a>
       <a href="faq.html">FAQ</a>
     </div>
-    <a class="btn btn-fill nav-cta" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Reserve Your Date</a>
+    <a class="btn btn-fill nav-cta" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire Now</a>
     <button class="hamburger" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -473,7 +527,7 @@
   <a href="index.html#difference" class="mobile-link">The Camera</a>
   <a href="investment.html" class="mobile-link">Your Experience</a>
   <a href="faq.html" class="mobile-link">FAQ</a>
-  <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Reserve Your Date</a>
+  <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire Now</a>
 </div>
 
 <main>
@@ -483,7 +537,7 @@
     <div class="wrap">
       <div class="faq-head reveal">
         <span class="page-label">FAQ</span>
-        <h2>Before You Reserve</h2>
+        <h2>Before You Inquire</h2>
       </div>
 
       <div class="faq-list reveal">
