@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DSLR Photo Booth Rental in Northern New Jersey | Ephemeral Booth</title>
-<meta name="description" content="DSLR photo booth rental for weddings, corporate events, and celebrations across Northern New Jersey. Full-frame image quality, custom layouts, and unlimited sessions. Packages from $450.">
+<meta name="description" content="DSLR photo booth rental for weddings, corporate events, and celebrations across Northern New Jersey. Full-frame image quality, custom layouts, and unlimited sessions. Custom quotes for every event.">
 <meta name="keywords" content="photo booth rental Northern New Jersey, DSLR photo booth NJ, wedding photo booth New Jersey, corporate event photo booth NJ, party photo booth rental">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Ephemeral Booth LLC">
@@ -41,29 +41,8 @@
     "@type": "State",
     "name": "Northern New Jersey"
   },
-  "priceRange": "$450-$600",
   "sameAs": [
     "https://www.instagram.com/ephemeralbooth"
-  ],
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "name": "The Moment Collection",
-      "price": "450",
-      "priceCurrency": "USD"
-    },
-    {
-      "@type": "Offer",
-      "name": "The Memory Collection",
-      "price": "525",
-      "priceCurrency": "USD"
-    },
-    {
-      "@type": "Offer",
-      "name": "The Legacy Collection",
-      "price": "600",
-      "priceCurrency": "USD"
-    }
   ]
 }
 </script>
@@ -230,11 +209,25 @@
   }
   .hero-sub{margin-top:10px; max-width:40ch; font-size:15px; color:#3c3a34; font-weight:300;}
   .hero-ctas{margin-top:18px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
-  .hero-scroll{position:absolute; bottom:6px; left:50%; transform:translateX(-50%); font-size:9.5px; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold-deep); display:flex; flex-direction:column; align-items:center; gap:6px;}
-  .hero-scroll .line{width:1px; height:20px; background:linear-gradient(var(--gold), transparent); animation:scrolldrop 2.2s ease-in-out infinite;}
-  @keyframes scrolldrop{0%{transform:scaleY(0.4); opacity:0;}50%{opacity:1;}100%{transform:scaleY(1); opacity:0;}}
 
   /* ---------- pillars (compact single row) ---------- */
+  /* ---------- founding collection promo ---------- */
+  .founding{background:var(--ivory); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .founding-top{background:var(--ink); padding:30px 0 22px; text-align:center;}
+  .founding-mark{height:32px; width:auto; margin:0 auto 14px; filter:invert(1) brightness(1.4);}
+  .founding-top h2{font-family:var(--serif); font-weight:500; font-style:italic; color:var(--paper); font-size:clamp(26px,3.4vw,38px);}
+  .founding-body{padding:30px 0 36px;}
+  .founding-intro{max-width:520px; margin:0 auto 26px; text-align:center;}
+  .founding-intro h3{font-family:var(--serif); font-weight:500; font-size:18px; margin-bottom:6px;}
+  .founding-intro p{font-size:14px; color:#5c5546; margin-bottom:14px; font-weight:300;}
+  .founding-list{list-style:none; text-align:left;}
+  .founding-list li{font-size:14px; color:var(--ink); padding:8px 0; border-top:1px solid var(--line); display:flex; gap:8px; font-weight:300;}
+  .founding-list li::before{content:'—'; color:var(--gold); flex-shrink:0;}
+  .founding-offer{max-width:520px; margin:0 auto 26px; padding-top:22px; border-top:1px solid var(--line); text-align:center;}
+  .offer-label{display:block; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-deep); font-weight:500; margin-bottom:10px;}
+  .founding-offer p{font-size:12.5px; color:#726b5c; font-weight:300; line-height:1.6;}
+  .founding-cta{text-align:center;}
+
   .pillars-section{padding:40px 0 36px; background:var(--ink); color:var(--ivory);}
   .pillars-head{margin-bottom:22px; max-width:520px;}
   .pillars-head h2{font-family:var(--serif); font-weight:500; font-size:clamp(22px,2.6vw,32px); margin-bottom:8px; color:var(--paper);}
@@ -341,32 +334,21 @@
 
   /* ---------- packages ---------- */
   .packages{padding:44px 0; background:var(--ivory);}
-  .pkg-head{margin-bottom:20px; max-width:520px;}
-  .pkg-head h2{font-family:var(--serif); font-weight:500; font-size:clamp(22px,2.6vw,32px); margin-bottom:6px;}
-  .pkg-head p{color:#5c5546; font-size:14px; margin-bottom:8px;}
-  .pkg-head p:last-child{margin-bottom:0;}
-  .pkg-grid{display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--line); background:var(--paper);}
-  @media(max-width:900px){.pkg-grid{grid-template-columns:1fr; border:none;}}
-  .pkg-card{padding:22px 20px; border-right:1px solid var(--line); position:relative; display:flex; flex-direction:column; transition:transform .4s cubic-bezier(.4,0,.2,1), box-shadow .4s cubic-bezier(.4,0,.2,1);}
-  .pkg-card:hover{transform:translateY(-4px); box-shadow:0 20px 40px rgba(11,11,9,0.1); z-index:2;}
-  .pkg-card.featured:hover{box-shadow:0 20px 40px rgba(11,11,9,0.35);}
-  @media(max-width:900px){.pkg-card{border-right:none; border:1px solid var(--line); margin-bottom:-1px;}}
-  .pkg-card:last-child{border-right:none;}
-  .pkg-card.featured{background:var(--ink); color:var(--ivory);}
-  .pkg-tag{position:absolute; top:0; right:0; background:var(--gold); color:var(--ink); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; padding:6px 12px;}
-  .pkg-name{font-family:var(--serif); font-weight:500; font-size:20px; margin-bottom:4px;}
-  .pkg-card.featured .pkg-name{color:var(--gold-bright);}
-  .pkg-desc{font-size:12.5px; color:#726b5c; margin-bottom:10px;}
-  .pkg-card.featured .pkg-desc{color:#c9c0b2;}
-  .pkg-price{font-family:var(--serif); font-size:32px; font-weight:500; margin-bottom:2px;}
-  .pkg-hours{font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:12px;}
-  .pkg-card.featured .pkg-hours{color:var(--gold-bright);}
-  .pkg-list{list-style:none; margin-bottom:14px; flex:1;}
-  .pkg-list li{font-size:13px; padding:6px 0; border-top:1px solid var(--line); display:flex; gap:8px;}
-  .pkg-card.featured .pkg-list li{border-top:1px solid rgba(227,218,207,0.16);}
-  .pkg-list li::before{content:'—'; color:var(--gold); flex-shrink:0;}
-  .pkg-note{font-size:10.5px; color:#9b9484; margin-top:8px;}
-  .pkg-card.featured .pkg-note{color:#8f8879;}
+  .pkg-head{margin:0 auto 24px; max-width:600px; text-align:center;}
+  .pkg-head h2{font-family:var(--serif); font-weight:500; font-size:clamp(22px,2.6vw,32px); margin-bottom:8px;}
+  .pkg-lede{font-family:var(--serif); font-style:italic; color:var(--gold-deep); font-size:16px;}
+  .pkg-copy{max-width:640px; margin:0 auto 28px;}
+  .pkg-copy p{font-size:14.5px; color:#3c3a34; margin-bottom:12px; font-weight:300; line-height:1.65;}
+  .pkg-copy p:last-child{margin-bottom:0;}
+  .pkg-includes{max-width:620px; margin:0 auto 28px; padding-top:26px; border-top:1px solid var(--line);}
+  .pkg-includes h3{font-family:var(--serif); font-weight:500; font-size:18px; margin-bottom:16px; text-align:center;}
+  .includes-list{display:grid; grid-template-columns:1fr 1fr; gap:9px 28px; list-style:none;}
+  .includes-list li{font-size:13.5px; color:#3c3a34; display:flex; gap:8px; font-weight:300;}
+  .includes-list li::before{content:'—'; color:var(--gold); flex-shrink:0;}
+  @media(max-width:600px){.includes-list{grid-template-columns:1fr;}}
+  .pkg-closing{max-width:540px; margin:0 auto; text-align:center; padding-top:26px; border-top:1px solid var(--line);}
+  .pkg-closing p{font-size:14.5px; color:#3c3a34; margin-bottom:14px; font-weight:300; line-height:1.65;}
+  .pkg-tagline{font-family:var(--serif); font-style:italic; color:var(--gold-deep); font-size:15.5px; margin-bottom:22px !important;}
 
   /* ---------- enhancements accordion ---------- */
   .enhancements{padding:44px 0; background:var(--paper);}
@@ -492,9 +474,10 @@
     <div class="navlinks">
       <a href="#how">Our Brand Promise</a>
       <a href="#difference">The Camera</a>
-      <a href="#packages">Experiences</a>
+      <a href="investment.html">Your Experience</a>
+      <a href="faq.html">FAQ</a>
     </div>
-    <a class="btn btn-fill nav-cta" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Reserve Your Date</a>
+    <a class="btn btn-fill nav-cta" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire Now</a>
     <button class="hamburger" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -504,8 +487,9 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#how" class="mobile-link">Our Brand Promise</a>
   <a href="#difference" class="mobile-link">The Camera</a>
-  <a href="#packages" class="mobile-link">Experiences</a>
-  <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Reserve Your Date</a>
+  <a href="investment.html" class="mobile-link">Your Experience</a>
+  <a href="faq.html" class="mobile-link">FAQ</a>
+  <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire Now</a>
 </div>
 
 <main id="top">
@@ -527,11 +511,40 @@
     <p class="hero-sub">A DSLR photo booth experience for weddings, corporate events, and celebrations across Northern New Jersey — built to blend seamlessly into your party.</p>
 
     <div class="hero-ctas">
-      <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Reserve Your Date</a>
-      <a class="btn btn-line" href="#packages">See Pricing</a>
+      <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire Now</a>
+      <a class="btn btn-line" href="investment.html">Your Experience</a>
     </div>
+  </section>
 
-    <div class="hero-scroll" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
+  <!-- FOUNDING COLLECTION -->
+  <section class="founding">
+    <div class="founding-top">
+      <div class="wrap">
+        <img class="founding-mark" src="data:image/png;base64,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" alt="Ephemeral Booth">
+        <h2 class="reveal">Founding Collection</h2>
+      </div>
+    </div>
+    <div class="wrap founding-body">
+      <div class="founding-intro reveal">
+        <h3>Become Part of Our Beginning</h3>
+        <p>As one of our first 10 founding clients, you'll enjoy:</p>
+        <ul class="founding-list">
+          <li>$100 preferred launch pricing</li>
+          <li>Founding Client Status*</li>
+          <li>Exclusive launch keepsake</li>
+          <li>Priority booking for future events</li>
+        </ul>
+      </div>
+
+      <div class="founding-offer reveal">
+        <span class="offer-label">Special Offer</span>
+        <p>Founding collection available for the first 10 booked events. Offer cannot be combined with other promotions. Founding client status offers you Lifetime VIP Pricing.*</p>
+      </div>
+
+      <div class="founding-cta reveal">
+        <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire Now</a>
+      </div>
+    </div>
   </section>
 
   <!-- PILLARS -->
@@ -609,69 +622,10 @@
     </div>
   </section>
 
-  <!-- PACKAGES -->
-  <section class="packages" id="packages">
-    <div class="wrap">
-      <div class="pkg-head reveal">
-        <h2>The Investment</h2>
-        <p>Unlimited sessions, unlimited GIFs, and an online gallery come standard on every collection.</p>
-        <p>We are committed to a transparent pricing model — priced by the hour and the effort of inclusions, not the event.</p>
-      </div>
-
-      <div class="pkg-grid">
-        <div class="pkg-card reveal">
-          <div class="pkg-name">The Moment Collection</div>
-          <div class="pkg-desc">For intimate celebrations and milestone moments.</div>
-          <div class="pkg-price">$450</div>
-          <div class="pkg-hours">3 Hours of Coverage</div>
-          <ul class="pkg-list">
-            <li>Unlimited photo sessions</li>
-            <li>Unlimited GIFs / Boomerangs</li>
-            <li>Instant digital sharing</li>
-            <li>1 custom welcome screen animation</li>
-            <li>1 custom photo layout</li>
-            <li>Online event gallery</li>
-          </ul>
-          <a class="btn btn-line pkg-cta" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire</a>
-        </div>
-
-        <div class="pkg-card featured reveal">
-          <div class="pkg-tag">Most Booked</div>
-          <div class="pkg-name">The Memory Collection</div>
-          <div class="pkg-desc">For celebrations where every guest ends up in frame.</div>
-          <div class="pkg-price">$525</div>
-          <div class="pkg-hours">4 Hours of Coverage</div>
-          <ul class="pkg-list">
-            <li>Everything in the Moment Collection</li>
-            <li>2 custom photo layouts</li>
-            <li>Premium prop collection*</li>
-          </ul>
-          <a class="btn btn-fill pkg-cta" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire</a>
-        </div>
-
-        <div class="pkg-card reveal">
-          <div class="pkg-name">The Legacy Collection</div>
-          <div class="pkg-desc">For weddings and the milestones you'll tell your kids about.</div>
-          <div class="pkg-price">$600</div>
-          <div class="pkg-hours">5 Hours of Coverage</div>
-          <ul class="pkg-list">
-            <li>Everything in the Moment & Memory Collections</li>
-            <li>3 custom photo layouts</li>
-            <li>Premium prop collection*</li>
-            <li>Choice of premium backdrop*</li>
-          </ul>
-          <a class="btn btn-line pkg-cta" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire</a>
-        </div>
-      </div>
-      <p class="pkg-note">*Ask about current prop and backdrop options for your date.</p>
-    </div>
-  </section>
-
   <!-- ENHANCEMENTS -->
   <section class="enhancements" id="enhancements">
     <div class="wrap">
       <div class="enh-head reveal">
-        <div class="eyebrow">Add-Ons</div>
         <h2>Ephemeral Booth Enhancements</h2>
         <p>Tack these onto any collection to fit your event exactly.</p>
       </div>
@@ -680,31 +634,31 @@
         <summary class="enh-master-toggle"><span>View Enhancements</span></summary>
         <div class="enh-list">
         <details class="enh-item">
-          <summary><span class="enh-name">Additional Hour</span><span class="enh-price">$100</span></summary>
+          <summary><span class="enh-name">Additional Hour</span></summary>
           <p class="enh-desc">Extend coverage beyond your package's included hours.</p>
         </details>
         <details class="enh-item">
-          <summary><span class="enh-name">Idle Time</span><span class="enh-price">$35/hr</span></summary>
+          <summary><span class="enh-name">Idle Time</span></summary>
           <p class="enh-desc">Booth stays set up but paused — useful for a ceremony or dinner-service gap.</p>
         </details>
         <details class="enh-item">
-          <summary><span class="enh-name">Additional Custom Layout</span><span class="enh-price">$15</span></summary>
+          <summary><span class="enh-name">Additional Custom Layout</span></summary>
           <p class="enh-desc">A second print design for a different part of your event.</p>
         </details>
         <details class="enh-item">
-          <summary><span class="enh-name">Premium Props</span><span class="enh-price">$50</span></summary>
+          <summary><span class="enh-name">Premium Props</span></summary>
           <p class="enh-desc">Upgraded prop selection beyond the standard set.</p>
         </details>
         <details class="enh-item">
-          <summary><span class="enh-name">Premium Backdrop</span><span class="enh-price">$75</span></summary>
+          <summary><span class="enh-name">Premium Backdrop</span></summary>
           <p class="enh-desc">Choice from our premium backdrop collection.</p>
         </details>
         <details class="enh-item">
-          <summary><span class="enh-name">Custom Welcome Animation</span><span class="enh-price">$35</span></summary>
+          <summary><span class="enh-name">Custom Welcome Animation</span></summary>
           <p class="enh-desc">An animated welcome screen, built for your event.</p>
         </details>
         <details class="enh-item">
-          <summary><span class="enh-name">Travel</span><span class="enh-price">Custom Quote</span></summary>
+          <summary><span class="enh-name">Travel</span></summary>
           <p class="enh-desc">For events outside our standard Northern New Jersey service area.</p>
         </details>
         </div>
@@ -712,70 +666,12 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <div class="wrap">
-      <div class="faq-head reveal">
-        <div class="eyebrow">FAQ</div>
-        <h2>Before You Reserve</h2>
-      </div>
-
-      <div class="faq-list reveal">
-        <details class="faq-item">
-          <summary><span class="faq-q">Do you travel?</span></summary>
-          <p class="faq-a">Yes. We proudly serve Northern New Jersey and surrounding areas. Travel within our standard service area is included, while destinations outside that area may have a travel fee. Contact us with your venue, and we'll provide a personalized quote.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">Why do you use a DSLR instead of an iPad camera?</span></summary>
-          <p class="faq-a">We believe fleeting moments deserve timeless quality. Our booths use professional DSLR cameras and studio lighting to produce sharper images, richer colors, and better performance in challenging event lighting than tablet-based booths.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">How much space do you need?</span></summary>
-          <p class="faq-a">Our setup typically requires an area of approximately 8' × 8' with access to a standard electrical outlet. If you're unsure whether your venue has enough room, we're happy to help you plan the layout.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">How long does setup take?</span></summary>
-          <p class="faq-a">We arrive approximately one hour before your scheduled start time to ensure everything is ready before your guests arrive. Setup and breakdown are included in every booking.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">Do guests receive their photos instantly?</span></summary>
-          <p class="faq-a">Yes. Guests can receive their photos instantly via text, email, AirDrop, or by scanning a QR code, depending on your selected package.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">Can the booth be customized?</span></summary>
-          <p class="faq-a">Absolutely. From welcome screens and photo overlays to backdrops and print designs, every event is customized to match your style and branding.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">Do you offer prints?</span></summary>
-          <p class="faq-a">Not yet — every collection is currently a digital experience, with instant sharing via text, email, AirDrop, or QR code. Prints aren't available at this time.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">Are you insured?</span></summary>
-          <p class="faq-a">Yes. We carry liability insurance and can provide a certificate of insurance (COI) to your venue upon request.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">How do I reserve my date?</span></summary>
-          <p class="faq-a">A signed agreement and retainer secure your event date. The remaining balance is due before your event.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">What types of events do you serve?</span></summary>
-          <p class="faq-a">We photograph weddings, corporate events, galas, brand activations, birthday celebrations, graduations, bridal showers, baby showers, and private parties throughout Northern New Jersey.</p>
-        </details>
-        <details class="faq-item">
-          <summary><span class="faq-q">What happens if something goes wrong?</span></summary>
-          <p class="faq-a">We bring backup equipment and thoroughly test every setup before guests arrive. If an unexpected issue occurs, our on-site attendant is there to resolve it quickly so your event continues without interruption.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
   <!-- BOOK CTA -->
   <section class="book-cta">
     <div class="wrap book-grid">
-      <div class="eyebrow reveal" style="justify-content:center;">Reserve</div>
       <div class="book-side reveal">
         <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Start Your Inquiry</a>
-        <p class="book-note">Availability is limited during peak wedding season — reserve your date early.</p>
+        <p class="book-note">Availability is limited during peak wedding season — inquire early.</p>
         <div class="contact-row">
           <a href="mailto:info@ephemeralbooth.com">info@ephemeralbooth.com</a>
           <a href="https://www.instagram.com/ephemeralbooth?igsh=a3d5aDF0cndsdzZs" target="_blank" rel="noopener">@ephemeralbooth</a>
@@ -788,7 +684,6 @@
   <section class="service-area">
     <div class="wrap">
       <div class="reveal">
-        <div class="eyebrow">Where We Work</div>
         <h2>Serving Northern New Jersey</h2>
         <p class="intro">Based in Northern New Jersey, proudly serving weddings and events throughout:</p>
         <div class="city-list">
@@ -817,7 +712,8 @@
   <nav class="footer-nav" aria-label="Footer">
     <a href="#how">Our Brand Promise</a>
     <a href="#difference">The Camera</a>
-    <a href="#packages">Experiences</a>
+    <a href="investment.html">Your Experience</a>
+    <a href="faq.html">FAQ</a>
     <a href="mailto:info@ephemeralbooth.com">Contact</a>
   </nav>
 
