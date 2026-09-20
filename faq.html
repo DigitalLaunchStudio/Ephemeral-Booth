@@ -512,6 +512,7 @@
     <div class="navlinks">
       <a href="index.html#how">Our Brand Promise</a>
       <a href="index.html#difference">The Camera</a>
+      <a href="enhancements.html">Enhancements</a>
       <a href="investment.html">Your Experience</a>
       <a href="faq.html">FAQ</a>
     </div>
@@ -525,6 +526,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#how" class="mobile-link">Our Brand Promise</a>
   <a href="index.html#difference" class="mobile-link">The Camera</a>
+  <a href="enhancements.html" class="mobile-link">Enhancements</a>
   <a href="investment.html" class="mobile-link">Your Experience</a>
   <a href="faq.html" class="mobile-link">FAQ</a>
   <a class="btn btn-fill" href="https://form.jotform.com/ephemeralbooth/ephemeral-booth-llc-event-inquiry-f" target="_blank" rel="noopener">Inquire Now</a>
@@ -599,6 +601,7 @@
   <nav class="footer-nav" aria-label="Footer">
     <a href="index.html#how">Our Brand Promise</a>
     <a href="index.html#difference">The Camera</a>
+    <a href="enhancements.html">Enhancements</a>
     <a href="investment.html">Your Experience</a>
     <a href="faq.html">FAQ</a>
     <a href="mailto:info@ephemeralbooth.com">Contact</a>
@@ -661,6 +664,30 @@
     revealEls.forEach(el=>io.observe(el));
   } else {
     revealEls.forEach(el=>el.classList.add('in'));
+  }
+
+  // Smooth scroll to same-page anchors without adding # to the URL
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+
+  // If arriving from another page with a #section link, scroll there then clean the URL
+  if(window.location.hash){
+    const targetId = window.location.hash.slice(1);
+    const target = document.getElementById(targetId);
+    if(target){
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+      requestAnimationFrame(()=>{
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    }
   }
 </script>
 
