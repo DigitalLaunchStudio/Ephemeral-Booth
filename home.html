@@ -869,6 +869,30 @@
   } else {
     revealEls.forEach(el=>el.classList.add('in'));
   }
+
+  // Smooth scroll to same-page anchors without adding # to the URL
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const id = this.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+
+  // If arriving from another page with a #section link, scroll there then clean the URL
+  if(window.location.hash){
+    const targetId = window.location.hash.slice(1);
+    const target = document.getElementById(targetId);
+    if(target){
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+      requestAnimationFrame(()=>{
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    }
+  }
 </script>
 
 </body>
